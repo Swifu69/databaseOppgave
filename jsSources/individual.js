@@ -22,3 +22,17 @@ var firebaseConfig = {
     .then((doc) => {
         const individual = doc.data()
         for (let key in individual) table.innerHTML += `<th><td> ${key}: ${individual[key]} </td></th>`  });
+
+  db.collection("registerForBiler")
+    .doc(individualId)
+    .get()
+    .then((doc) => {
+        const individual = doc.data()
+        for (let key in individual) table.innerHTML += `<th><td> ${key}: ${individual[key]} </td></th>`  });
+
+   db.collection("registerForEkteskap")
+    .doc(individualId)
+    .get()
+    .then((doc) => {
+        const individual = doc.data()
+        for (let key in individual) table.innerHTML += `<th><td> ${key}: ${individual[key]} </td></th>`  });
