@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styleSources/styles.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+  </head>
+  <body onload="bilRegisterOnLoad()">
+    <header class="header">
+      <h1 class="logo"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Bil Register</a></h1>
+      <ul class="main-nav">
+        <li><a href="../index.html">Personer</a></li>
+        <li><a href="bilRegister.html">Kjøretøy</a></li>
+        <li><a href="ekteskapRegister.html">Ekteskap</a></li>
+        <li><a href="omoss.html">Om oss</a></li>
+      </ul>
+    </header>
+
+    <table id="table" class="styled-table"></table>
+
+    <form onsubmit="addItemsDataBiler(event)">
+      <input
+        name="Eier"
+        placeholder="Eier"
+        class="input-field-car"
+        required=""
+      />
+      <input
+        name="SkiltNummer"
+        placeholder="SkiltNummer"
+        class="input-field-car"
+        required=""
+      />
+      <input
+        type="number"
+        name="Personnummer"
+        placeholder="PersonNummer"
+        class="input-field-car"
+        onkeydown="javascript: return event.keyCode == 69 ? false : true"
+      />
+      <input
+        name="Type"
+        placeholder="Type"
+        class="input-field-car"
+        required=""
+      />
+      <button type="submit" class="name noselect" id="button-1">Submit</button>
+      <script defer src="../jsSources/code.js"></script>
+    </form>
+  </body>
+</html>

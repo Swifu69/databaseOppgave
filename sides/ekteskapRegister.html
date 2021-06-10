@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../styleSources/styles.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+  </head>
+  <body onload="ekteskapRegisterOnLoad()">
+    <header class="header">
+      <h1 class="logo"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Ekteskap Register </a></h1>
+      <ul class="main-nav">
+        <li><a href="../index.html">Personer</a></li>
+        <li><a href="bilRegister.html">Kjøretøy</a></li>
+        <li><a href="ekteskapRegister.html">Ekteskap</a></li>
+        <li><a href="omoss.html">Om oss</a></li>
+      </ul>
+    </header>
+
+    <table id="table" class="styled-table"></table>
+    <form onsubmit="addItemsDataEkteskap(event)">
+      <input
+        name="Navn"
+        placeholder="Navn"
+        class="input-field-ekte"
+        required=""
+      />
+      <input
+        type="number"
+        name="Personnummer"
+        placeholder="PersonNummer"
+        class="input-field-ekte"
+        onkeydown="javascript: return event.keyCode == 69 ? false : true"
+      />
+      <input
+        type="number"
+        name="Ektefelle"
+        placeholder="Ektefelle"
+        class="input-field-ekte"
+        onkeydown="javascript: return event.keyCode == 69 ? false : true"
+      />
+      <button type="submit" class="name noselect" id="button-1">Submit</button>
+      <script defer src="../jsSources/code.js"></script>
+    </form>
+  </body>
+</html>
