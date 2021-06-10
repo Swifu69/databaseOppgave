@@ -27,7 +27,7 @@ function personRegisterOnLoad() {
     
       onclick="db.collection('registerForTing').doc('${
         doc.id
-      }').delete()">Delete</button> </th> <th> <a href="individual.html?individual=${encodeURI(
+      }').delete()">Delete</button> </th> <th> <a href="../sides/individual.html?individual=${encodeURI(
           doc.id
         )}"> ${doc.data().Navn} </a> </th><th>${
           doc.data().Adresse
